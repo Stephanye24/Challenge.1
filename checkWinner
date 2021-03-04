@@ -1,0 +1,16 @@
+let calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+const koalas = calcAverage(23, 34, 27);
+const dolphins = calcAverage(85, 54, 41);
+
+let checkWiner = function (avgdolphins, avgkoalas) {
+    if (avgdolphins >= 2 * avgkoalas) {
+        return `Dolphins Wins!( ${avgdolphins} VS. ${avgkoalas} ).`
+    } else if (avgkoalas >= 2 * avgdolphins) {
+        return `Koalas Wins!( ${avgkoalas} VS. ${avgdolphins} ).`
+    } else {
+        return "No one wins."
+    }
+}
+
+console.log(checkWiner(dolphins, koalas));
